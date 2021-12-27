@@ -1,0 +1,6 @@
+Użytkownik - wybór (Uczeń,nauczyciel,pracowanik) i zmiana formularza dostosowanego do wybranego użytkownika
+Załaduj plik - ładowanie pliku i w przyszłości zdjęcia
+Wyszukiwarka danych przez szukanie frazy
+Tabela pokazująca wszystkie dane prowadzone
+Formularz dostosowany do użytkownika - po wciśnięciu przyciusku dodaj
+
