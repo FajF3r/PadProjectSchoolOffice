@@ -6,7 +6,53 @@
         xmlns:local="clr-namespace:PadProject"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Użytkownik">
+                <MenuItem Header="Uczeń" />
+                <MenuItem Header="Pracownik" />
+                <MenuItem Header="Nauczyciel" />
+                <Separator />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+        </Menu>
+        <TextBox AcceptsReturn="True" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Margin="10px">Dodaj</Button>
+                <Button Grid.Column="1" Margin="10px">Usuń</Button>
+                <Button Grid.Column="2" Margin="10px">Załaduj</Button>
+            </Grid>
 
-    </Grid>
+            <DataGrid Name="dgUsers" AutoGenerateColumns="False" SelectionChanged="dgUsers_SelectionChanged" Grid.Row="1">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Imie" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Drugie Imie" Binding="{Binding secondName}" Width="*"/>
+                <DataGridTextColumn Header="Nazwisko" Binding="{Binding surName}" Width="*"/>
+                <DataGridTextColumn Header="Nazwisko panieńskie" Binding="{Binding mName}" Width="*"/>
+                <DataGridTextColumn Header="Imie Matki" Binding="{Binding mothersName}" Width="*"/>
+                <DataGridTextColumn Header="Imie Ojca" Binding="{Binding fathersName}" Width="*"/>
+                <DataGridTemplateColumn Header="Data urodzenia">
+                    <DataGridTemplateColumn.CellTemplate Width="*">
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding Birthday}" BorderThickness="0" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="klasa" Binding="{Binding class}" Width="*"/>
+                <DataGridTextColumn Header="grupa" Binding="{Binding group}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        </Grid>
+    </DockPanel>
 </Window>

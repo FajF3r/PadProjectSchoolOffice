@@ -24,5 +24,10 @@ namespace PadProject
         {
             InitializeComponent();
         }
+
+        private void dgUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
