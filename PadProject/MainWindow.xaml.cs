@@ -29,5 +29,23 @@ namespace PadProject
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var uczen = new uczen();
+            uczen.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var nauczyciel = new nauczyciel();
+            nauczyciel.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var pracownik = new pracownik();
+            pracownik.Show();
+        }
     }
 }
