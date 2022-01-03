@@ -13,19 +13,13 @@ using System.Windows.Shapes;
 namespace PadProject
 {
     /// <summary>
-    /// Interaction logic for uczen.xaml
+    /// Interaction logic for formUczen.xaml
     /// </summary>
-    public partial class uczen : Window
+    public partial class formUczen : Window
     {
-        public uczen()
+        public formUczen()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var formUczen = new formUczen();
-            formUczen.Show();
         }
     }
 }
